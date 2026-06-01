@@ -1,0 +1,166 @@
+SECTION A: Core Concepts
+JavaScript library
+A tool with prewritten code you can use.
+Example: React, jQuery.
+Framework
+A full structure that controls how you build apps.
+Example: Angular, Django.
+Difference (Analogy)
+Library = you call it when needed 📞
+Framework = it calls you (rules everything) 🎮
+Why React is a library
+It focuses only on UI, not full app structure.
+Why developers use React
+Fast (Virtual DOM)
+Reusable components
+Easy to maintain
+Large community
+Strong ecosystem
+SPA (Single Page Application)
+One page loads, content updates without refresh.
+SPA vs Traditional
+SPA: no reload 🔄❌
+Traditional: reload every page 🔄✅
+Problem React solves
+Messy DOM updates → React makes updates fast & organized.
+SECTION B: React Fundamentals
+Component
+Reusable UI block (like a button or navbar).
+Functional vs Class
+Functional: simpler, modern
+Class: older, uses lifecycle methods
+JSX
+HTML inside JavaScript.
+JSX rules
+One parent element
+Close all tags
+Use {} for JS
+Props vs State
+Props: passed from parent (read-only)
+State: internal, can change
+State
+Data that controls UI.
+useState (concept)
+Stores value → when it changes → UI updates.
+Event handling
+React uses camelCase (onClick), not lowercase.
+Conditional rendering
+if statement
+ternary (condition ? A : B)
+Lists & keys
+Keys help React identify items → better updates.
+Controlled component
+Form input controlled by React state.
+useEffect
+Runs side effects (fetch, timers, etc).
+Dependency array
+Empty [] → runs once
+With values → runs when they change
+No array → runs every render
+SECTION C: React Internals
+Virtual DOM
+Copy of real DOM (lighter & faster).
+Efficient updates
+Compares old vs new → updates only changes.
+Re-rendering
+Component updates UI when data changes.
+Triggers
+State change
+Props change
+Small components advantage
+Easy to manage
+Reusable
+Cleaner code
+Reusability
+Write once, use many times.
+SECTION D: Project Structure
+main.jsx
+Entry point (renders app to DOM).
+App.jsx
+Main component (root UI).
+Connection
+main.jsx → renders App.jsx.
+components folder
+Stores reusable UI parts.
+assets folder
+Stores images, fonts, etc.
+Why store images there
+Keeps project organized.
+Import image
+import img from "./assets/pic.png";
+<img src={img} />
+SECTION E: NPM
+npm
+Package manager for JS.
+package.json
+Project info + dependencies.
+Important fields
+name
+version
+scripts
+dependencies
+main
+package-lock.json
+Locks exact versions.
+Difference
+package.json → general versions
+lock → exact versions
+npm install
+install all dependencies
+npm install react → installs React only
+npm run
+Runs scripts.
+Start command
+Check scripts in package.json.
+scripts section
+Stores commands (start, build).
+Example package
+npm install axios
+Used for API calls
+Appears in dependencies
+SECTION F: TOOLS
+Vite
+Fast build tool for React apps.
+Build tool
+Helps bundle and run code.
+Why use Vite
+Faster startup
+Hot reload
+Dev vs Web server
+Dev: for development
+Web: serves final app
+Running app
+Local server starts → app opens in browser.
+SECTION G: ENV & GIT
+.env
+Stores environment variables.
+Why use it
+Hide sensitive data.
+Examples
+API keys
+URLs
+.gitignore
+Files Git should ignore.
+node_modules ignored
+Too large, can reinstall.
+Other ignored
+.env
+build folder
+Risks
+Leaks secrets 😬
+SECTION H: ROUTING
+Client-side routing
+Switch pages without reload.
+React Router
+Library for routing.
+Why needed
+For navigation in SPA.
+Difference
+No page reload vs full reload.
+Tags
+<BrowserRouter> → wraps app
+<Routes> → holds routes
+<Route> → defines path
+<a> vs <Link>
+<a> → reloads page
+<Link> → no reload 🚀 
